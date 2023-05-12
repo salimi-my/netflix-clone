@@ -8,8 +8,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'red-netflix': 'rgba(229, 9, 20, 1)',
-        'red-netflix-dark': 'rgba(193, 17, 25, 1)'
+        'red-netfuix': 'rgba(229, 9, 20, 1)',
+        'red-netfuix-dark': 'rgba(193, 17, 25, 1)'
       }
     }
   },
