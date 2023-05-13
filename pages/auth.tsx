@@ -3,14 +3,11 @@ import NetfuixLogo from '../components/svg/NetfuixLogo';
 import Input from '../components/Input';
 import axios from 'axios';
 import { signIn } from 'next-auth/react';
-import { useRouter } from 'next/router';
 
 import { FcGoogle } from 'react-icons/fc';
 import { FaGithub } from 'react-icons/fa';
 
 const Auth = () => {
-  const router = useRouter();
-
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
   const [password, setPassword] = useState('');
@@ -28,15 +25,12 @@ const Auth = () => {
       await signIn('credentials', {
         email,
         password,
-        redirect: false,
-        callbackUrl: '/browse'
+        callbackUrl: '/profile'
       });
-
-      router.push('/browse');
     } catch (error) {
       console.log(error);
     }
-  }, [email, password, router]);
+  }, [email, password]);
 
   const register = useCallback(async () => {
     try {
@@ -106,16 +100,16 @@ const Auth = () => {
               </p>
             </div>
 
-            <div
-              onClick={() => signIn('google', { callbackUrl: '/browse' })}
-              className='flex flex-row items-center gap-4 justify-center'
-            >
-              <div className='w-full bg-white rounded-md flex items-center justify-center cursor-pointer hover:opacity-80 transition py-[0.4rem]'>
+            <div className='flex flex-row items-center gap-4 justify-center'>
+              <div
+                onClick={() => signIn('google', { callbackUrl: '/profile' })}
+                className='w-full bg-white rounded-md flex items-center justify-center cursor-pointer hover:opacity-80 transition py-[0.4rem]'
+              >
                 <FcGoogle size={24} className='mr-[0.4rem] h-6' />
                 <span className='text-gray-900 font-semibold'>Google</span>
               </div>
               <div
-                onClick={() => signIn('github', { callbackUrl: '/browse' })}
+                onClick={() => signIn('github', { callbackUrl: '/profile' })}
                 className='w-full bg-neutral-600 rounded-md flex items-center justify-center cursor-pointer hover:opacity-80 transition py-[0.4rem]'
               >
                 <FaGithub size={24} className='mr-[0.4rem] h-6 text-zinc-50' />
