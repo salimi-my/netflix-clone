@@ -29,10 +29,10 @@ const Auth = () => {
         email,
         password,
         redirect: false,
-        callbackUrl: '/'
+        callbackUrl: '/browse'
       });
 
-      router.push('/');
+      router.push('/browse');
     } catch (error) {
       console.log(error);
     }
@@ -107,7 +107,7 @@ const Auth = () => {
             </div>
 
             <div
-              onClick={() => signIn('google', { callbackUrl: '/' })}
+              onClick={() => signIn('google', { callbackUrl: '/browse' })}
               className='flex flex-row items-center gap-4 justify-center'
             >
               <div className='w-full bg-white rounded-md flex items-center justify-center cursor-pointer hover:opacity-80 transition py-[0.4rem]'>
@@ -115,7 +115,7 @@ const Auth = () => {
                 <span className='text-gray-900 font-semibold'>Google</span>
               </div>
               <div
-                onClick={() => signIn('github', { callbackUrl: '/' })}
+                onClick={() => signIn('github', { callbackUrl: '/browse' })}
                 className='w-full bg-neutral-600 rounded-md flex items-center justify-center cursor-pointer hover:opacity-80 transition py-[0.4rem]'
               >
                 <FaGithub size={24} className='mr-[0.4rem] h-6 text-zinc-50' />
