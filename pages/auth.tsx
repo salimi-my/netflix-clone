@@ -1,9 +1,12 @@
 import React, { useCallback, useState } from 'react';
-import NetflixLogo from '../components/svg/NetflixLogo';
+import NetfuixLogo from '../components/svg/NetfuixLogo';
 import Input from '../components/Input';
 import axios from 'axios';
 import { signIn } from 'next-auth/react';
 import { useRouter } from 'next/router';
+
+import { FcGoogle } from 'react-icons/fc';
+import { FaGithub } from 'react-icons/fa';
 
 const Auth = () => {
   const router = useRouter();
@@ -53,7 +56,7 @@ const Auth = () => {
     <div className="relative h-full w-full bg-[url('/images/hero.jpg')] bg-no-repeat bg-center bg-fixed bg-cover">
       <div className='bg-black w-full h-full lg:bg-opacity-50'>
         <nav className='px-12 py-5'>
-          <NetflixLogo />
+          <NetfuixLogo />
         </nav>
         <div className='flex justify-center'>
           <div className='bg-black bg-opacity-70 px-16 py-16 self-center mt-2 lg:max-w-md rounded-sm w-full'>
@@ -92,13 +95,37 @@ const Auth = () => {
             </div>
             <button
               onClick={variant == 'login' ? login : register}
-              className='bg-red-netflix py-3 font-semibold text-white rounded-md w-full mt-10 hover:bg-red-netflix-dark transition'
+              className='bg-red-netfuix py-3 font-semibold text-white rounded-md w-full mt-10 hover:bg-red-netfuix-dark transition'
             >
               {variant == 'login' ? 'Sign In' : 'Sign Up'}
             </button>
+
+            <div className='my-7 flex items-center before:mt-0.5 before:flex-1 before:border-t before:border-neutral-500 after:mt-0.5 after:flex-1 after:border-t after:border-neutral-500'>
+              <p className='mx-4 mb-0 text-center font-semibold text-neutral-500'>
+                Or continue with
+              </p>
+            </div>
+
+            <div
+              onClick={() => signIn('google', { callbackUrl: '/' })}
+              className='flex flex-row items-center gap-4 justify-center'
+            >
+              <div className='w-full bg-white rounded-md flex items-center justify-center cursor-pointer hover:opacity-80 transition py-[0.4rem]'>
+                <FcGoogle size={24} className='mr-[0.4rem] h-6' />
+                <span className='text-gray-900 font-semibold'>Google</span>
+              </div>
+              <div
+                onClick={() => signIn('github', { callbackUrl: '/' })}
+                className='w-full bg-neutral-600 rounded-md flex items-center justify-center cursor-pointer hover:opacity-80 transition py-[0.4rem]'
+              >
+                <FaGithub size={24} className='mr-[0.4rem] h-6 text-zinc-50' />
+                <span className='text-zinc-50 font-semibold'>Github</span>
+              </div>
+            </div>
+
             <p className='text-neutral-500 mt-12'>
               {variant == 'login'
-                ? 'New to Netflix?'
+                ? 'New to Netfuix?'
                 : 'Already have an account?'}
               <span
                 onClick={toggleVariant}
