@@ -50,7 +50,7 @@ const Auth = () => {
     <div className="relative h-full w-full bg-[url('/images/hero.jpg')] bg-no-repeat bg-center bg-fixed bg-cover">
       <div className='bg-black w-full h-full lg:bg-opacity-50'>
         <nav className='px-12 py-5'>
-          <NetfuixLogo />
+          <NetfuixLogo classes='w-[9.25rem] h-[2.5rem] text-red-netfuix block fill-current' />
         </nav>
         <div className='flex justify-center'>
           <div className='bg-black bg-opacity-70 px-16 py-16 self-center mt-2 lg:max-w-md rounded-sm w-full'>
