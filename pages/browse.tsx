@@ -2,6 +2,7 @@ import type { NextPage, NextPageContext } from 'next';
 import { getSession, signOut } from 'next-auth/react';
 import useCurrentUser from '../hooks/useCurrentUser';
 import Navbar from '../components/Navbar';
+import Billboard from '../components/Billboard';
 
 const Browse: NextPage = () => {
   const { data: user } = useCurrentUser();
@@ -9,6 +10,7 @@ const Browse: NextPage = () => {
   return (
     <>
       <Navbar />
+      <Billboard />
     </>
   );
 };
