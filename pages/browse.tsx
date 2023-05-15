@@ -12,7 +12,7 @@ const Browse: NextPage = () => {
     <>
       <Navbar />
       <Billboard />
-      <div className='pb-40 relative z-10'>
+      <div className='pb-40 relative z-10 -top-64'>
         <MovieList title='Trending Now' data={movies} />
       </div>
     </>

@@ -17,7 +17,7 @@ const Billboard = () => {
   }, []);
 
   return (
-    <div className='relative h-[56.25vh]'>
+    <div className='relative h-auto'>
       <div className='relative'>
         <video
           ref={videoRef}
