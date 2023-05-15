@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.billboard-vignette {
+.bottom-vignette {
   background-color: transparent;
   background-image: linear-gradient(
     180deg,
@@ -21,6 +21,17 @@
   opacity: 1;
   top: auto;
   width: 100%;
+}
+
+.left-vignette {
+  background: linear-gradient(77deg, rgba(0, 0, 0, 0.6), transparent 85%);
+  bottom: 0;
+  left: 0;
+  opacity: 1;
+  position: absolute;
+  right: 26.09%;
+  top: 0;
+  transition: opacity 0.5s;
 }
 
 body {
