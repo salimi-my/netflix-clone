@@ -1,0 +1,38 @@
+[
+  {
+    "_id": { "$oid": "6461bc3d0374a8a3161b6be4" },
+    "title": "Big Buck Bunny",
+    "description": "Three rodents amuse themselves by harassing creatures of the forest. However, when they mess with a bunny, he decides to teach them a lesson.",
+    "videoUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/7/70/Big.Buck.Bunny.-.Opening.Screen.png",
+    "genre": ["Comedy", "Animation", "Short"],
+    "duration": "0h 10m"
+  },
+  {
+    "_id": { "$oid": "6461bd240374a8a3161b6be6" },
+    "title": "Sintel",
+    "description": "A lonely young woman, Sintel, helps and befriends a dragon, whom she calls Scales. But when he is kidnapped by an adult dragon, Sintel decides to embark on a dangerous quest to find her lost friend Scales.",
+    "videoUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
+    "thumbnailUrl": "http://uhdtv.io/wp-content/uploads/2020/10/Sintel-3.jpg",
+    "genre": ["Fantasy", "Animation", "Short"],
+    "duration": "0h 15m"
+  },
+  {
+    "_id": { "$oid": "6461bd910374a8a3161b6be7" },
+    "title": "Tears of Steel",
+    "description": "In an apocalyptic future, a group of soldiers and scientists takes refuge in Amsterdam to try to stop an army of robots that threatens the planet.",
+    "videoUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+    "thumbnailUrl": "https://mango.blender.org/wp-content/uploads/2013/05/01_thom_celia_bridge.jpg",
+    "genre": ["Sci-Fi", "Short"],
+    "duration": "0h 12m"
+  },
+  {
+    "_id": { "$oid": "6461bdd80374a8a3161b6be8" },
+    "title": "Elephants Dream",
+    "description": "Friends Proog and Emo journey inside the folds of a seemingly infinite Machine, exploring the dark and twisted complex of wires, gears, and cogs, until a moment of conflict negates all their assumptions.",
+    "videoUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+    "thumbnailUrl": "https://download.blender.org/ED/cover.jpg",
+    "genre": ["Sci-Fi", "Animation", "Short"],
+    "duration": "0h 15m"
+  }
+]
