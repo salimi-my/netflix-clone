@@ -43,7 +43,9 @@ const Navbar = () => {
     <nav className='w-full fixed z-40'>
       <div
         className={`px-4 md:px-[30px] lg:px-16 py-3 lg:py-5 flex flex-row items-center transition duration-500 ${
-          showBackground ? 'bg-dark-netfuix' : ''
+          showBackground
+            ? 'bg-dark-netfuix'
+            : 'bg-gradient-to-b from-dark-netfuix to-transparent'
         }`}
       >
         <NetfuixLogo classes='h-4 lg:h-[25px] w-auto text-red-netfuix block fill-current' />
