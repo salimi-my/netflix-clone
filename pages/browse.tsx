@@ -1,16 +1,20 @@
 import type { NextPage, NextPageContext } from 'next';
-import { getSession, signOut } from 'next-auth/react';
-import useCurrentUser from '../hooks/useCurrentUser';
+import { getSession } from 'next-auth/react';
 import Navbar from '../components/Navbar';
 import Billboard from '../components/Billboard';
+import MovieList from '../components/MovieList';
+import useMovieList from '../hooks/useMovieList';
 
 const Browse: NextPage = () => {
-  const { data: user } = useCurrentUser();
+  const { data: movies = [] } = useMovieList();
 
   return (
     <>
       <Navbar />
       <Billboard />
+      <div className='pb-40 relative z-10'>
+        <MovieList title='Trending Now' data={movies} />
+      </div>
     </>
   );
 };

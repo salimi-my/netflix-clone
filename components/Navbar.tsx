@@ -40,7 +40,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className='w-full fixed z-40'>
+    <nav className='w-full fixed z-50'>
       <div
         className={`px-4 md:px-[30px] lg:px-16 py-3 lg:py-5 flex flex-row items-center transition duration-500 ${
           showBackground
