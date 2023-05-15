@@ -12,19 +12,23 @@ const Billboard = () => {
         videoRef.current?.play();
       }
     }, 3000);
+
     return () => clearTimeout(timer);
   }, []);
 
   return (
     <div className='relative h-[56.25vh]'>
-      <video
-        ref={videoRef}
-        loop
-        poster={data?.thumbnailUrl}
-        src={data?.videoUrl}
-        className='w-full h-[56.25vw] object-cover brightness-[60%]'
-      ></video>
-      <div className='absolute top-[30%] md:top-[40%] ml-4 md:ml-16'>
+      <div className='relative'>
+        <video
+          ref={videoRef}
+          loop
+          poster={data?.thumbnailUrl}
+          src={data?.videoUrl}
+          className='w-full h-[56.25vw] object-cover brightness-[60%]'
+        ></video>
+        <div className='billboard-vignette left-0 absolute right-0 z-10'></div>
+      </div>
+      <div className='absolute top-[10%] lg:top-[20%] xl:top-[40%] ml-4 md:ml-16'>
         <p className='text-white text-xl md:text-5xl h-full w-[50%] lg:text-6xl font-bold drop-shadow-xl'>
           {data?.title}
         </p>
