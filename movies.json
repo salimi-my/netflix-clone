@@ -1,38 +1,65 @@
 [
   {
-    "_id": { "$oid": "6461bc3d0374a8a3161b6be4" },
+    "_id": { "$oid": "test_id_1" },
     "title": "Big Buck Bunny",
     "description": "Three rodents amuse themselves by harassing creatures of the forest. However, when they mess with a bunny, he decides to teach them a lesson.",
-    "videoUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
-    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/7/70/Big.Buck.Bunny.-.Opening.Screen.png",
+    "videoUrl": "https://res.cloudinary.com/salimi/video/upload/v1684221792/netflix-clone-video/big-buck-bunny_pyiwx7.mp4",
+    "thumbnailUrl": "https://res.cloudinary.com/salimi/image/upload/v1684218092/video-poster/big-buck-bunny_jutuum.jpg",
     "genre": ["Comedy", "Animation", "Short"],
     "duration": "0h 10m"
   },
   {
-    "_id": { "$oid": "6461bd240374a8a3161b6be6" },
+    "_id": { "$oid": "test_id_2" },
     "title": "Sintel",
     "description": "A lonely young woman, Sintel, helps and befriends a dragon, whom she calls Scales. But when he is kidnapped by an adult dragon, Sintel decides to embark on a dangerous quest to find her lost friend Scales.",
-    "videoUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
-    "thumbnailUrl": "http://uhdtv.io/wp-content/uploads/2020/10/Sintel-3.jpg",
+    "videoUrl": "https://res.cloudinary.com/salimi/video/upload/v1684221811/netflix-clone-video/sintel_qxryrz.mp4",
+    "thumbnailUrl": "https://res.cloudinary.com/salimi/image/upload/v1684218091/video-poster/sintel_uixa0t.jpg",
     "genre": ["Fantasy", "Animation", "Short"],
     "duration": "0h 15m"
   },
   {
-    "_id": { "$oid": "6461bd910374a8a3161b6be7" },
+    "_id": { "$oid": "test_id_3" },
     "title": "Tears of Steel",
     "description": "In an apocalyptic future, a group of soldiers and scientists takes refuge in Amsterdam to try to stop an army of robots that threatens the planet.",
-    "videoUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
-    "thumbnailUrl": "https://mango.blender.org/wp-content/uploads/2013/05/01_thom_celia_bridge.jpg",
+    "videoUrl": "https://res.cloudinary.com/salimi/video/upload/v1684221798/netflix-clone-video/tears-of-steel_j4qmsm.mp4",
+    "thumbnailUrl": "https://res.cloudinary.com/salimi/image/upload/v1684218088/video-poster/tears-of-steel_jw42td.jpg",
     "genre": ["Sci-Fi", "Short"],
     "duration": "0h 12m"
   },
   {
-    "_id": { "$oid": "6461bdd80374a8a3161b6be8" },
+    "_id": { "$oid": "test_id_4" },
     "title": "Elephants Dream",
     "description": "Friends Proog and Emo journey inside the folds of a seemingly infinite Machine, exploring the dark and twisted complex of wires, gears, and cogs, until a moment of conflict negates all their assumptions.",
-    "videoUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
-    "thumbnailUrl": "https://download.blender.org/ED/cover.jpg",
+    "videoUrl": "https://res.cloudinary.com/salimi/video/upload/v1684223216/netflix-clone-video/elephants-dream_rpmcc2.mp4",
+    "thumbnailUrl": "https://res.cloudinary.com/salimi/image/upload/v1684218092/video-poster/elephants-dream_ikowjk.jpg",
     "genre": ["Sci-Fi", "Animation", "Short"],
     "duration": "0h 15m"
+  },
+  {
+    "_id": { "$oid": "test_id_5" },
+    "title": "Spring",
+    "description": "Spring is the story of a shepherd girl and her dog, who face ancient spirits in order to continue the cycle of life. This poetic and visually stunning short film was written and directed by Andy Goralczyk, inspired by his childhood in the mountains of Germany.",
+    "videoUrl": "https://res.cloudinary.com/salimi/video/upload/v1684221803/netflix-clone-video/spring_osiq4o.mp4",
+    "thumbnailUrl": "https://res.cloudinary.com/salimi/image/upload/v1684218090/video-poster/spring_vnewrb.jpg",
+    "genre": ["Adventure", "Animation", "Short"],
+    "duration": "0h 8m"
+  },
+  {
+    "_id": { "$oid": "test_id_6" },
+    "title": "Cosmos Laundromat",
+    "description": "On a desolate island, suicidal sheep Franck meets his fate in a quirky salesman, who offers him the gift of a lifetime. Little does he know that he can only handle this much 'lifetime'.",
+    "videoUrl": "https://res.cloudinary.com/salimi/video/upload/v1684221823/netflix-clone-video/cosmos-laundromat-first-cycle_u0ryeb.mp4",
+    "thumbnailUrl": "https://res.cloudinary.com/salimi/image/upload/v1684218095/video-poster/cosmos-laundromat-first-cycle_vwmmik.jpg",
+    "genre": ["Fantasy", "Animation", "Short"],
+    "duration": "0h 12m"
+  },
+  {
+    "_id": { "$oid": "test_id_7" },
+    "title": "Sprite Fright",
+    "description": "When a group of rowdy teenagers trek into an isolated forest, they discover peaceful mushroom creatures that turn out to be an unexpected force of nature.",
+    "videoUrl": "https://res.cloudinary.com/salimi/video/upload/v1684222955/netflix-clone-video/sprite-fright_bgklmd.mp4",
+    "thumbnailUrl": "https://res.cloudinary.com/salimi/image/upload/v1684218089/video-poster/sprite-fright_flxxw9.jpg",
+    "genre": ["Horror", "Comedy", "Short"],
+    "duration": "0h 10m"
   }
 ]

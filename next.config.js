@@ -3,13 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: [
-      'commondatastorage.googleapis.com',
-      'upload.wikimedia.org',
-      'uhdtv.io',
-      'mango.blender.org',
-      'download.blender.org'
-    ]
+    domains: ['res.cloudinary.com']
   }
 };
 
