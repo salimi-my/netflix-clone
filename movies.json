@@ -12,7 +12,7 @@
     "_id": { "$oid": "test_id_2" },
     "title": "Sintel",
     "description": "A lonely young woman, Sintel, helps and befriends a dragon, whom she calls Scales. But when he is kidnapped by an adult dragon, Sintel decides to embark on a dangerous quest to find her lost friend Scales.",
-    "videoUrl": "https://res.cloudinary.com/salimi/video/upload/v1684221811/netflix-clone-video/sintel_qxryrz.mp4",
+    "videoUrl": "https://res.cloudinary.com/salimi/video/upload/v1684225261/netflix-clone-video/sintel_mxhyer.mp4",
     "thumbnailUrl": "https://res.cloudinary.com/salimi/image/upload/v1684218091/video-poster/sintel_uixa0t.jpg",
     "genre": ["Fantasy", "Animation", "Short"],
     "duration": "0h 15m"
@@ -21,7 +21,7 @@
     "_id": { "$oid": "test_id_3" },
     "title": "Tears of Steel",
     "description": "In an apocalyptic future, a group of soldiers and scientists takes refuge in Amsterdam to try to stop an army of robots that threatens the planet.",
-    "videoUrl": "https://res.cloudinary.com/salimi/video/upload/v1684221798/netflix-clone-video/tears-of-steel_j4qmsm.mp4",
+    "videoUrl": "https://res.cloudinary.com/salimi/video/upload/v1684225002/netflix-clone-video/tears-of-steel_hkqisy.mp4",
     "thumbnailUrl": "https://res.cloudinary.com/salimi/image/upload/v1684218088/video-poster/tears-of-steel_jw42td.jpg",
     "genre": ["Sci-Fi", "Short"],
     "duration": "0h 12m"
@@ -48,7 +48,7 @@
     "_id": { "$oid": "test_id_6" },
     "title": "Cosmos Laundromat",
     "description": "On a desolate island, suicidal sheep Franck meets his fate in a quirky salesman, who offers him the gift of a lifetime. Little does he know that he can only handle this much 'lifetime'.",
-    "videoUrl": "https://res.cloudinary.com/salimi/video/upload/v1684221823/netflix-clone-video/cosmos-laundromat-first-cycle_u0ryeb.mp4",
+    "videoUrl": "https://res.cloudinary.com/salimi/video/upload/v1684224756/netflix-clone-video/cosmos-laundromat-first-cycle_k0b2db.mp4",
     "thumbnailUrl": "https://res.cloudinary.com/salimi/image/upload/v1684218095/video-poster/cosmos-laundromat-first-cycle_vwmmik.jpg",
     "genre": ["Fantasy", "Animation", "Short"],
     "duration": "0h 12m"
@@ -57,7 +57,7 @@
     "_id": { "$oid": "test_id_7" },
     "title": "Sprite Fright",
     "description": "When a group of rowdy teenagers trek into an isolated forest, they discover peaceful mushroom creatures that turn out to be an unexpected force of nature.",
-    "videoUrl": "https://res.cloudinary.com/salimi/video/upload/v1684222955/netflix-clone-video/sprite-fright_bgklmd.mp4",
+    "videoUrl": "https://res.cloudinary.com/salimi/video/upload/v1684224514/netflix-clone-video/sprite-fright_d827yg.mp4",
     "thumbnailUrl": "https://res.cloudinary.com/salimi/image/upload/v1684218089/video-poster/sprite-fright_flxxw9.jpg",
     "genre": ["Horror", "Comedy", "Short"],
     "duration": "0h 10m"
