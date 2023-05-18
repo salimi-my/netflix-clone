@@ -13,6 +13,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
         src={data.thumbnailUrl}
         alt='Movie'
         fill={true}
+        sizes='(max-width: 767px) 50vw, (max-width: 1023px) 33vw, (max-width: 1279px) 25vw, (max-width: 1535px) 25vw, 16vw'
         draggable={false}
         className='cursor-pointer object-cover transition duration-0 shadow-md rounded-md group-hover:opacity-90 sm:group-hover:opacity-0 delay-300 w-full h-[109px] md:h-[131px] lg:h-[130px] xl:h-[121px] 2xl:h-[165px]'
       />
@@ -22,6 +23,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
             src={data.thumbnailUrl}
             alt='Movie'
             fill={true}
+            sizes='(max-width: 767px) 50vw, (max-width: 1023px) 33vw, (max-width: 1279px) 25vw, (max-width: 1535px) 25vw, 16vw'
             draggable={false}
             className='object-cover'
           />
