@@ -30,7 +30,7 @@ const Billboard = () => {
         <div className='left-vignette z-10'></div>
         <div className='bottom-vignette left-0 absolute right-0 z-10'></div>
       </div>
-      <div className='absolute top-[10%] lg:top-[20%] xl:top-[40%] ml-4 md:ml-16 z-10'>
+      <div className='absolute top-[20%] md:top-[15%] lg:top-[20%] xl:top-[40%] ml-4 md:ml-16 z-10'>
         <p className='text-white text-xl md:text-5xl h-full w-[50%] lg:text-6xl font-bold drop-shadow-xl'>
           {data?.title}
         </p>
