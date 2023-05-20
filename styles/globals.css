@@ -34,6 +34,14 @@
   transition: opacity 0.5s;
 }
 
+.modal-vignette {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(0deg, #181818, transparent 50%);
+}
+
 body {
   @apply bg-dark-netfuix h-full;
 }
