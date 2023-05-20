@@ -19,8 +19,8 @@ const AccountMenu: React.FC<AccountMenuProps> = ({ visible }) => {
 
   return (
     <>
-      <AiFillCaretUp className='absolute top-[2.7rem] text-white w-56 -left-24 z-10' />
-      <div className='bg-black w-56 absolute top-14 right-0 py-3 pt-4 flex-col border border-zinc-700 flex'>
+      <AiFillCaretUp className='absolute top-[2.4rem] text-white w-56 -left-24 z-10' />
+      <div className='bg-black w-56 absolute top-[50px] right-0 py-3 pt-4 flex-col border border-zinc-700 flex'>
         <div className='flex flex-col gap-3'>
           <div className='px-3 group/item flex flex-row gap-3 items-center w-full'>
             <Image

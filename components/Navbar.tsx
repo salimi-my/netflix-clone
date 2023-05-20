@@ -48,7 +48,7 @@ const Navbar = () => {
             : 'bg-gradient-to-b from-dark-netfuix to-transparent'
         }`}
       >
-        <NetfuixLogo classes='h-4 lg:h-[25px] w-auto text-red-netfuix block fill-current' />
+        <NetfuixLogo classes='h-5 lg:h-[25px] w-auto text-red-netfuix block fill-current' />
         <div className='flex-row ml-10 gap-5 hidden lg:flex'>
           <NavbarItem label='Home' />
           <NavbarItem label='TV Shows' />
@@ -58,9 +58,9 @@ const Navbar = () => {
         </div>
         <div
           onClick={toggleMobileMenu}
-          className='lg:hidden flex flex-row items-center gap-1 ml-6 cursor-pointer relative'
+          className='lg:hidden flex flex-row items-center gap-1 ml-3 md:ml-6 cursor-pointer relative'
         >
-          <p className='font-medium text-white text-[9.5px]'>Browse</p>
+          <p className='font-semibold text-white'>Browse</p>
           <AiFillCaretDown
             className={`text-white w-3 mt-[1px] transition ${
               showMobileMenu ? 'rotate-180' : 'rotate-0'
@@ -68,7 +68,7 @@ const Navbar = () => {
           />
           <MobileMenu visible={showMobileMenu} />
         </div>
-        <div className='flex flex-row ml-auto gap-5 items-center font-semibold'>
+        <div className='flex flex-row ml-auto gap-2 md:gap-5 items-center font-semibold'>
           <div className='text-gray-200 hover:text-gray-300 cursor-pointer'>
             <SearchIcon />
           </div>
