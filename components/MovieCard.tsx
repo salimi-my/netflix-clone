@@ -22,7 +22,10 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
         className='cursor-pointer object-cover transition duration-0 shadow-md rounded-md group-hover:opacity-90 sm:group-hover:opacity-0 delay-300 w-full h-[109px] md:h-[131px] lg:h-[130px] xl:h-[121px] 2xl:h-[165px]'
       />
       <div className='opacity-0 absolute top-0 transition duration-300 z-10 invisible sm:visible delay-200 w-full scale-0 md:group-hover:scale-100 lg:group-hover:scale-110 xl:group-hover:scale-125 2xl:group-hover:scale-[1.45] group-hover:-translate-y-[5vw] group-hover:opacity-100'>
-        <div className='relative cursor-pointer object-cover transition duration shadow-md rounded-t-md w-full h-[79px] md:h-[101px] lg:h-[100px] xl:h-[91px] 2xl:h-[135px] overflow-hidden'>
+        <div
+          onClick={() => router.push(`/watch/${data?.id}`)}
+          className='relative cursor-pointer object-cover transition duration shadow-md rounded-t-md w-full h-[79px] md:h-[101px] lg:h-[100px] xl:h-[91px] 2xl:h-[135px] overflow-hidden'
+        >
           <Image
             src={data.thumbnailUrl}
             alt='Movie'
