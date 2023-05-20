@@ -2,12 +2,15 @@ import Image from 'next/image';
 import React from 'react';
 import { BsFillPlayFill } from 'react-icons/bs';
 import FavouriteButton from './FavouriteButton';
+import { useRouter } from 'next/router';
 
 interface MovieCardProps {
   data: Record<string, any>;
 }
 
 const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
+  const router = useRouter();
+
   return (
     <div className='group bg-dark-netfuix col-span relative h-[109px] md:h-[131px] lg:h-[130px] xl:h-[121px] 2xl:h-[165px] rounded-md'>
       <Image
@@ -32,7 +35,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
         <div className='z-10 bg-[#181818] p-2 lg:py-3 lg:px-4 absolute w-full transition shadow-md rounded-b-md'>
           <div className='flex flex-row items-center gap-3'>
             <div
-              onClick={() => {}}
+              onClick={() => router.push(`/watch/${data?.id}`)}
               className='cursor-pointer w-6 h-6 lg:w-7 lg:h-7 bg-white rounded-full flex justify-center items-center transition hover:bg-neutral-300'
             >
               <BsFillPlayFill size={30} className='ml-[3px]' />
