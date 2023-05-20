@@ -30,11 +30,11 @@ const Billboard = () => {
         <div className='left-vignette z-10'></div>
         <div className='bottom-vignette left-0 absolute right-0 z-10'></div>
       </div>
-      <div className='absolute top-[20%] md:top-[15%] lg:top-[20%] xl:top-[40%] ml-4 md:ml-16 z-10'>
-        <p className='text-white text-xl md:text-5xl h-full w-[50%] lg:text-6xl font-bold drop-shadow-xl'>
+      <div className='absolute top-[20%] md:top-[15%] lg:top-[20%] xl:top-[30%] ml-4 md:ml-16 z-10'>
+        <p className='text-white text-xl md:text-5xl h-full w-full lg:w-[80%] xl:w-[50%] lg:text-6xl font-bold drop-shadow-xl'>
           {data?.title}
         </p>
-        <p className='text-white text-[8px] md:text-lg mt-3 md:mt-8 w-[90%] md:w-[80%] lg:w-[50%] drop-shadow-xl'>
+        <p className='text-white text-[8px] md:text-lg mt-3 md:mt-8 w-[90%] md:w-full lg:w-[80%] xl:w-[50%] drop-shadow-xl'>
           {data?.description}
         </p>
         <div className='flex flex-row items-center mt-3 md:mt-4 gap-3'>
