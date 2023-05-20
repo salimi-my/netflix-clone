@@ -94,14 +94,14 @@ html {
 .swiper-button-prev,
 .swiper-button-next {
   font-weight: bolder;
-  width: 60px !important;
+  width: 40px !important;
   height: 109px !important;
   top: 52px !important;
 }
 
 @media only screen and (min-width: 768px) {
   .swiper-wrapper {
-    padding: 54px 0;
+    padding: 40px 0;
   }
 
   .swiper-button-prev,
@@ -109,13 +109,13 @@ html {
     font-weight: bolder;
     width: 60px !important;
     height: 131px !important;
-    top: 76px !important;
+    top: 62px !important;
   }
 }
 
 @media only screen and (min-width: 1024px) {
   .swiper-wrapper {
-    padding: 72px 0;
+    padding: 60px 0;
   }
 
   .swiper-button-prev,
@@ -123,27 +123,27 @@ html {
     font-weight: bolder;
     width: 60px !important;
     height: 130px !important;
-    top: 94px !important;
+    top: 82px !important;
   }
 }
 
 @media only screen and (min-width: 1440px) {
   .swiper-wrapper {
-    padding: 102px 0;
+    padding: 90px 0;
   }
 
   .swiper-button-prev,
   .swiper-button-next {
     font-weight: bolder;
     width: 60px !important;
-    height: 121px !important;
-    top: 122px !important;
+    height: 122px !important;
+    top: 112px !important;
   }
 }
 
 @media only screen and (min-width: 1536px) {
   .swiper-wrapper {
-    padding: 134px 0;
+    padding: 129px 0;
   }
 
   .swiper-button-prev,
@@ -151,6 +151,6 @@ html {
     font-weight: bolder;
     width: 60px !important;
     height: 165px !important;
-    top: 156px !important;
+    top: 151px !important;
   }
 }
