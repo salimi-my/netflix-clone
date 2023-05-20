@@ -6,6 +6,8 @@ import { signIn } from 'next-auth/react';
 
 import { FcGoogle } from 'react-icons/fc';
 import { FaGithub } from 'react-icons/fa';
+import AuthFooter from '../components/AuthFooter';
+import Link from 'next/link';
 
 const Auth = () => {
   const [email, setEmail] = useState('');
@@ -48,12 +50,14 @@ const Auth = () => {
 
   return (
     <div className="relative h-full w-full bg-[url('/images/hero.jpg')] bg-no-repeat bg-center bg-fixed bg-cover">
-      <div className='bg-black w-full h-full lg:bg-opacity-50'>
-        <nav className='px-12 py-5'>
-          <NetfuixLogo classes='w-[9.25rem] h-[2.5rem] text-red-netfuix block fill-current' />
+      <div className='bg-black w-full min-h-[calc(100vh_-_287px)] md:min-h-[calc(100vh_-_250.5px)] md:bg-opacity-50'>
+        <nav className='px-4 md:px-12 py-5'>
+          <Link href='/'>
+            <NetfuixLogo classes='h-[2rem] md:w-[9.25rem] md:h-[2.5rem] text-red-netfuix block fill-current' />
+          </Link>
         </nav>
         <div className='flex justify-center'>
-          <div className='bg-black bg-opacity-70 px-16 py-16 self-center mt-2 lg:max-w-md rounded-sm w-full'>
+          <div className='bg-black bg-opacity-75 px-4 md:px-16 py-8 md:py-16 self-center md:max-w-md rounded-[4px] w-full'>
             <h2 className='text-white text-4xl mb-8 font-bold'>
               {variant == 'login' ? 'Sign In' : 'Sign Up'}
             </h2>
@@ -89,7 +93,7 @@ const Auth = () => {
             </div>
             <button
               onClick={variant == 'login' ? login : register}
-              className='bg-red-netfuix py-3 font-semibold text-white rounded-md w-full mt-10 hover:bg-red-netfuix-dark transition'
+              className='bg-red-netfuix py-3 font-semibold text-white rounded-[4px] w-full mt-10 hover:bg-red-netfuix-dark transition'
             >
               {variant == 'login' ? 'Sign In' : 'Sign Up'}
             </button>
@@ -103,14 +107,14 @@ const Auth = () => {
             <div className='flex flex-row items-center gap-4 justify-center'>
               <div
                 onClick={() => signIn('google', { callbackUrl: '/profile' })}
-                className='w-full bg-white rounded-md flex items-center justify-center cursor-pointer hover:opacity-80 transition py-[0.4rem]'
+                className='w-full bg-white rounded-[4px] flex items-center justify-center cursor-pointer hover:opacity-80 transition py-[0.4rem]'
               >
                 <FcGoogle size={24} className='mr-[0.4rem] h-6' />
                 <span className='text-gray-900 font-semibold'>Google</span>
               </div>
               <div
                 onClick={() => signIn('github', { callbackUrl: '/profile' })}
-                className='w-full bg-neutral-600 rounded-md flex items-center justify-center cursor-pointer hover:opacity-80 transition py-[0.4rem]'
+                className='w-full bg-neutral-600 rounded-[4px] flex items-center justify-center cursor-pointer hover:opacity-80 transition py-[0.4rem]'
               >
                 <FaGithub size={24} className='mr-[0.4rem] h-6 text-zinc-50' />
                 <span className='text-zinc-50 font-semibold'>Github</span>
@@ -132,6 +136,7 @@ const Auth = () => {
           </div>
         </div>
       </div>
+      <AuthFooter />
     </div>
   );
 };
