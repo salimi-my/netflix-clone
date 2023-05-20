@@ -1,11 +1,17 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef, useCallback } from 'react';
 import useBillboard from '../hooks/useBillboard';
 import { AiOutlineInfoCircle } from 'react-icons/ai';
 import PlayButton from './PlayButton';
+import useInfoModal from '../hooks/useInfoModal';
 
 const Billboard = () => {
   const { data } = useBillboard();
   const videoRef = useRef<HTMLVideoElement>(null);
+  const { openModal } = useInfoModal();
+
+  const handleOpenModal = useCallback(() => {
+    openModal(data?.id);
+  }, [openModal, data?.id]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -40,7 +46,10 @@ const Billboard = () => {
         </p>
         <div className='flex flex-row items-center mt-3 md:mt-4 gap-3'>
           <PlayButton movieId={data?.id} />
-          <button className='bg-[rgba(109,109,110,0.7)] text-white rounded-[4px] py-1 md:py-[6px] px-2 md:px-4 lg:px-6 w-auto text-xs md:text-base lg:text-xl font-bold flex flex-row items-center hover:bg-[rgba(109,109,110,0.4)] transition'>
+          <button
+            onClick={handleOpenModal}
+            className='bg-[rgba(109,109,110,0.7)] text-white rounded-[4px] py-1 md:py-[6px] px-2 md:px-4 lg:px-6 w-auto text-xs md:text-base lg:text-xl font-bold flex flex-row items-center hover:bg-[rgba(109,109,110,0.4)] transition'
+          >
             <AiOutlineInfoCircle className='mr-1 md:mr-3 text-lg md:text-2xl lg:text-4xl' />
             More Info
           </button>

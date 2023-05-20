@@ -9,9 +9,13 @@ import { AiOutlineCheck } from 'react-icons/ai';
 
 interface FavouriteButtonProps {
   movieId: string;
+  isModal?: boolean;
 }
 
-const FavouriteButton: React.FC<FavouriteButtonProps> = ({ movieId }) => {
+const FavouriteButton: React.FC<FavouriteButtonProps> = ({
+  movieId,
+  isModal
+}) => {
   const { mutate: mutateFavourites } = useFavourites();
   const { data: currentUser, mutate } = useCurrentUser();
 
@@ -44,9 +48,13 @@ const FavouriteButton: React.FC<FavouriteButtonProps> = ({ movieId }) => {
   return (
     <div
       onClick={toggleFavourites}
-      className='cursor-pointer group/item w-6 h-6 lg:w-7 lg:h-7 bg-[rgba(42,42,42,.6)] border-[hsla(0,0%,100%,.5)] border-[0.12rem] rounded-full flex justify-center items-center transition hover:border-white'
+      className={`cursor-pointer group/item bg-[rgba(42,42,42,.6)] border-[hsla(0,0%,100%,.5)] rounded-full flex justify-center items-center transition hover:border-white ${
+        isModal
+          ? 'border-2 w-6 h-6 p-[2px] md:p-0 md:w-9 md:h-9 lg:w-9 lg:h-9'
+          : 'border-[0.12rem] w-6 h-6 lg:w-7 lg:h-7'
+      }`}
     >
-      <Icon size={18} className='text-white' />
+      <Icon size={isModal ? 22 : 18} className='text-white' />
     </div>
   );
 };

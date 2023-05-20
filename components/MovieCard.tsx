@@ -1,8 +1,9 @@
 import Image from 'next/image';
 import React from 'react';
-import { BsFillPlayFill } from 'react-icons/bs';
+import { BsFillPlayFill, BsChevronDown } from 'react-icons/bs';
 import FavouriteButton from './FavouriteButton';
 import { useRouter } from 'next/router';
+import useInfoModal from '../hooks/useInfoModal';
 
 interface MovieCardProps {
   data: Record<string, any>;
@@ -10,11 +11,12 @@ interface MovieCardProps {
 
 const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
   const router = useRouter();
+  const { openModal } = useInfoModal();
 
   return (
     <div className='group bg-dark-netfuix col-span relative h-[109px] md:h-[131px] lg:h-[130px] xl:h-[121px] 2xl:h-[165px] rounded-md'>
       <Image
-        src={data.thumbnailUrl}
+        src={data?.thumbnailUrl}
         alt='Movie'
         fill={true}
         sizes='(max-width: 767px) 50vw, (max-width: 1023px) 33vw, (max-width: 1279px) 25vw, (max-width: 1535px) 25vw, 16vw'
@@ -27,7 +29,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
           className='relative cursor-pointer object-cover transition duration shadow-md rounded-t-md w-full h-[79px] md:h-[101px] lg:h-[100px] xl:h-[91px] 2xl:h-[135px] overflow-hidden'
         >
           <Image
-            src={data.thumbnailUrl}
+            src={data?.thumbnailUrl}
             alt='Movie'
             fill={true}
             sizes='(max-width: 767px) 50vw, (max-width: 1023px) 33vw, (max-width: 1279px) 25vw, (max-width: 1535px) 25vw, 16vw'
@@ -44,20 +46,26 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
               <BsFillPlayFill size={30} className='ml-[3px]' />
             </div>
             <FavouriteButton movieId={data?.id} />
+            <div
+              onClick={() => openModal(data?.id)}
+              className='cursor-pointer group/item w-6 h-6 lg:w-7 lg:h-7 bg-[rgba(42,42,42,.6)] border-[hsla(0,0%,100%,.5)] border-[0.12rem] rounded-full flex justify-center items-center transition hover:border-white ml-auto'
+            >
+              <BsChevronDown size={16} className='text-white' />
+            </div>
           </div>
           <div className='flex flex-row mt-3 gap-2 items-center text-xs'>
             <p className='text-green-400 font-semibold'>New</p>
             <div className='border border-gray-500 text-white leading-none px-[3px] py-[1px]'>
               13+
             </div>
-            <p className='text-white font-semibold'>{data.duration}</p>
+            <p className='text-white font-semibold'>{data?.duration}</p>
             <div className='border border-gray-500 text-white leading-none text-[0.4rem] px-[3px] py-[1px]'>
               HD
             </div>
           </div>
           <div className='flex flex-row items-center gap-2 mt-1 text-[8px] lg:text-xs text-white'>
             <div className='flex items-center font-semibold'>
-              {data.genre.map((genre: any, index: any, genres: any) => {
+              {data?.genre.map((genre: any, index: any, genres: any) => {
                 if (index + 1 === genres.length) {
                   return (
                     <div
