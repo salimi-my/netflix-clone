@@ -24,6 +24,7 @@ const Watch = () => {
         className='h-full w-full'
         autoPlay
         controls
+        controlsList='nodownload'
         src={data?.videoUrl}
       ></video>
     </div>
