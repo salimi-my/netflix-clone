@@ -49,7 +49,7 @@ const Auth = () => {
   }, [email, name, password, login]);
 
   return (
-    <div className="relative h-full w-full bg-[url('/images/hero.jpg')] bg-no-repeat bg-center bg-fixed bg-cover">
+    <div className="relative h-auto w-full bg-[url('/images/hero.jpg')] bg-no-repeat bg-center bg-fixed bg-cover">
       <div className='bg-black w-full min-h-[calc(100vh_-_287px)] md:min-h-[calc(100vh_-_250.5px)] md:bg-opacity-50'>
         <nav className='px-4 md:px-12 py-5'>
           <Link href='/'>
@@ -57,7 +57,7 @@ const Auth = () => {
           </Link>
         </nav>
         <div className='flex justify-center'>
-          <div className='bg-black bg-opacity-75 px-4 md:px-16 py-8 md:py-16 self-center md:max-w-md rounded-[4px] w-full'>
+          <div className='bg-black bg-opacity-75 px-4 md:px-16 py-8 md:py-16 self-center md:max-w-md rounded-[4px] w-full mb-10'>
             <h2 className='text-white text-4xl mb-8 font-bold'>
               {variant == 'login' ? 'Sign In' : 'Sign Up'}
             </h2>
@@ -136,7 +136,9 @@ const Auth = () => {
           </div>
         </div>
       </div>
-      <AuthFooter />
+      <div className='bg-black md:bg-opacity-50'>
+        <AuthFooter />
+      </div>
     </div>
   );
 };
