@@ -7,12 +7,15 @@ import ExitIcon from './svg/ExitIcon';
 import TransferIcon from './svg/TransferIcon';
 import AccountIcon from './svg/AccountIcon';
 import HelpIcon from './svg/HelpIcon';
+import useCurrentUser from '../hooks/useCurrentUser';
 
 interface AccountMenuProps {
   visible?: boolean;
 }
 
 const AccountMenu: React.FC<AccountMenuProps> = ({ visible }) => {
+  const { data } = useCurrentUser();
+
   if (!visible) {
     return null;
   }
@@ -31,7 +34,7 @@ const AccountMenu: React.FC<AccountMenuProps> = ({ visible }) => {
               alt='Profile'
             />
             <p className='text-white text-sm group-hover/item:underline'>
-              Kids
+              {data?.name}
             </p>
           </div>
           <div className='px-3 group/item flex flex-row gap-3 items-center w-full'>
