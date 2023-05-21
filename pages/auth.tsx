@@ -10,14 +10,17 @@ import AuthFooter from '../components/AuthFooter';
 import Link from 'next/link';
 import DisclaimerModal from '../components/DisclaimerModal';
 import SpinnerIcon from '../components/svg/SpinnerIcon';
+import { useRouter } from 'next/router';
 
 const Auth = () => {
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
   const [password, setPassword] = useState('');
-  const [loggingIn, setLoggingIn] = useState(false);
 
   const [variant, setVariant] = useState('login');
+  const [loggingIn, setLoggingIn] = useState(false);
+
+  const { error } = useRouter().query;
 
   const toggleVariant = useCallback(() => {
     setVariant((currentVariant) =>
@@ -67,6 +70,11 @@ const Auth = () => {
               <h2 className='text-white text-4xl mb-8 font-bold'>
                 {variant == 'login' ? 'Sign In' : 'Sign Up'}
               </h2>
+              {error && (
+                <p className='text-red-netfuix font-medium mb-2 -mt-3'>
+                  {error}
+                </p>
+              )}
               <div className='flex flex-col gap-4'>
                 {variant == 'register' && (
                   <Input
