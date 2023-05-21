@@ -9,11 +9,13 @@ import { FaGithub } from 'react-icons/fa';
 import AuthFooter from '../components/AuthFooter';
 import Link from 'next/link';
 import DisclaimerModal from '../components/DisclaimerModal';
+import SpinnerIcon from '../components/svg/SpinnerIcon';
 
 const Auth = () => {
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
   const [password, setPassword] = useState('');
+  const [loggingIn, setLoggingIn] = useState(false);
 
   const [variant, setVariant] = useState('login');
 
@@ -24,6 +26,7 @@ const Auth = () => {
   }, []);
 
   const login = useCallback(async () => {
+    setLoggingIn(true);
     try {
       await signIn('credentials', {
         email,
@@ -36,6 +39,7 @@ const Auth = () => {
   }, [email, password]);
 
   const register = useCallback(async () => {
+    setLoggingIn(true);
     try {
       await axios.post('/api/register', {
         email,
@@ -97,7 +101,14 @@ const Auth = () => {
                 onClick={variant == 'login' ? login : register}
                 className='bg-red-netfuix py-3 font-semibold text-white rounded-[4px] w-full mt-10 hover:bg-red-netfuix-dark transition'
               >
-                {variant == 'login' ? 'Sign In' : 'Sign Up'}
+                {loggingIn && (
+                  <div className='flex items-center justify-center'>
+                    <SpinnerIcon classes='text-white' />
+                    <p>Connecting...</p>
+                  </div>
+                )}
+                {!loggingIn && variant == 'login' && 'Sign In'}
+                {!loggingIn && variant != 'login' && 'Sign Up'}
               </button>
 
               <div className='my-7 flex items-center before:mt-0.5 before:flex-1 before:border-t before:border-neutral-500 after:mt-0.5 after:flex-1 after:border-t after:border-neutral-500'>
@@ -107,23 +118,35 @@ const Auth = () => {
               </div>
 
               <div className='flex flex-row items-center gap-4 justify-center'>
-                <div
-                  onClick={() => signIn('google', { callbackUrl: '/profile' })}
+                <button
+                  onClick={() => {
+                    signIn('google', { callbackUrl: '/profile' });
+                    setLoggingIn(true);
+                  }}
                   className='w-full bg-white rounded-[4px] flex items-center justify-center cursor-pointer hover:opacity-80 transition py-[0.4rem]'
                 >
-                  <FcGoogle size={24} className='mr-[0.4rem] h-6' />
+                  {loggingIn && <SpinnerIcon classes='text-black' />}
+                  {!loggingIn && (
+                    <FcGoogle size={24} className='mr-[0.4rem] h-6' />
+                  )}
                   <span className='text-gray-900 font-semibold'>Google</span>
-                </div>
-                <div
-                  onClick={() => signIn('github', { callbackUrl: '/profile' })}
+                </button>
+                <button
+                  onClick={() => {
+                    signIn('github', { callbackUrl: '/profile' });
+                    setLoggingIn(true);
+                  }}
                   className='w-full bg-neutral-600 rounded-[4px] flex items-center justify-center cursor-pointer hover:opacity-80 transition py-[0.4rem]'
                 >
-                  <FaGithub
-                    size={24}
-                    className='mr-[0.4rem] h-6 text-zinc-50'
-                  />
+                  {loggingIn && <SpinnerIcon classes='text-white' />}
+                  {!loggingIn && (
+                    <FaGithub
+                      size={24}
+                      className='mr-[0.4rem] h-6 text-zinc-50'
+                    />
+                  )}
                   <span className='text-zinc-50 font-semibold'>Github</span>
-                </div>
+                </button>
               </div>
 
               <p className='text-neutral-500 mt-12'>
