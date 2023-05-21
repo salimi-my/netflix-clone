@@ -1,34 +1,59 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# [Netfuix](https://netfuix.salimi.my) &middot; [![Author Salimi](https://img.shields.io/badge/Author-Salimi-%3C%3E)](https://www.linkedin.com/in/mohamad-salimi/)
 
-## Getting Started
+This is a Netflix clone app created using Next.js for educational purposes. User can sign up and create an account or sign in using Google or GitHub account. The app includes features of movie list slider, movie streaming, save favourite to My List collection and more.
 
-First, run the development server:
+## Exact copy of Netflix UI
+
+- This is a clone of Netflix app
+- Login using NextAuth.js through Google or GitHub
+- MongoDB & Prisma for database
+- Zustand for state management
+- useSWR hook for data fetching
+- Hosted in Vercel
+
+## Tech/framework used
+
+- Next.js
+- NextAuth.js
+- Tailwind CSS
+- TypeScript
+- MongoDB
+- Prisma
+- Zustand
+- Vercel
+
+## Starting the project
+
+Open the [.env.local.example](/.env.local.example) and fill in your MongoDB URL & NextAuth Configurations then save it as .env.local the run the following command:
 
 ```bash
+npm install
 npm run dev
 # or
-yarn dev
+yarn install
+yarn run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Demo
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+The app is hosted on Vercel. [Click here](https://netfuix.salimi.my) to visit.
+<br>
+Direct link: `https://netfuix.salimi.my`
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Screenshots
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+#### Landing
 
-## Learn More
+![Landing](/screenshots/screenshot-1.png)
 
-To learn more about Next.js, take a look at the following resources:
+#### Auth
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+![Auth](/screenshots/screenshot-2.png)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+#### Browse
 
-## Deploy on Vercel
+![Browse](/screenshots/screenshot-3.png)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+#### Modal
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![Modal](/screenshots/screenshot-4.png)
