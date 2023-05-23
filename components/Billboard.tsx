@@ -1,13 +1,16 @@
-import React, { useEffect, useState, useRef, useCallback } from 'react';
+import React, { useEffect, useRef, useCallback, useState } from 'react';
 import useBillboard from '../hooks/useBillboard';
 import { AiOutlineInfoCircle } from 'react-icons/ai';
 import PlayButton from './PlayButton';
 import useInfoModal from '../hooks/useInfoModal';
+import VolumeButton from './VolumeButton';
 
 const Billboard = () => {
   const { data } = useBillboard();
   const videoRef = useRef<HTMLVideoElement>(null);
   const { openModal } = useInfoModal();
+
+  const [isMute, setIsMute] = useState<boolean>(true);
 
   const handleOpenModal = useCallback(() => {
     openModal(data?.id);
@@ -23,13 +26,17 @@ const Billboard = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  const handleMuteVideo = () => {
+    setIsMute(!isMute);
+  };
+
   return (
     <div className='relative h-auto'>
       <div className='relative'>
         <video
           ref={videoRef}
           loop
-          muted
+          muted={isMute}
           poster={data?.thumbnailUrl}
           src={data?.videoUrl}
           className='w-full h-[56.25vw] object-cover brightness-[60%]'
@@ -53,8 +60,9 @@ const Billboard = () => {
             <AiOutlineInfoCircle className='mr-1 md:mr-3 text-lg md:text-2xl lg:text-4xl' />
             More Info
           </button>
-          <div className='flex flex-1 justify-end'>
-            <div className='text-white text-xs md:text-base lg:text-xl bg-[rgba(51,51,51,.6)] h-[2.4vw] flex items-center justify-start p-[12px_20px_12px_10px] md:p-[15px_20px_15px_10px] lg:p-[18px_30px_18px_10px] border-l-[3px] border-[#dcdcdc]'>
+          <div className='flex flex-1 justify-end gap-3'>
+            <VolumeButton isMute={isMute} handleMuteVideo={handleMuteVideo} />
+            <div className='text-white text-xs md:text-base lg:text-xl bg-[rgba(51,51,51,.6)] h-[2.4vw] flex items-center justify-start p-[12px_20px_12px_10px] md:p-[15px_20px_15px_10px] lg:p-[18px_30px_18px_10px] xl:p-[20px_40px_20px_15px] border-l-[3px] border-[#dcdcdc]'>
               13+
             </div>
           </div>
