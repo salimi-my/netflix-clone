@@ -37,11 +37,11 @@ const Billboard = () => {
         <div className='left-vignette z-10'></div>
         <div className='bottom-vignette left-0 absolute right-0 z-10'></div>
       </div>
-      <div className='absolute top-[20%] md:top-[15%] lg:top-[20%] xl:top-[30%] ml-4 md:ml-16 z-10'>
-        <p className='text-white text-xl md:text-5xl h-full w-full lg:w-[80%] xl:w-[50%] lg:text-6xl font-bold drop-shadow-xl'>
+      <div className='absolute top-[20%] md:top-[20%] lg:top-[30%] xl:top-[40%] ml-4 md:ml-16 z-10 w-[calc(100%_-_1rem)] md:w-[calc(100%_-_4rem)]'>
+        <p className='text-white text-xl md:text-5xl h-full w-full lg:w-[80%] xl:w-[60%] lg:text-6xl font-bold drop-shadow-xl'>
           {data?.title}
         </p>
-        <p className='text-white text-[8px] md:text-lg mt-3 md:mt-8 w-[90%] md:w-full lg:w-[80%] xl:w-[50%] drop-shadow-xl'>
+        <p className='text-white text-[8px] md:text-lg mt-3 md:mt-8 w-[90%] md:w-[90%] lg:w-[80%] xl:w-[50%] drop-shadow-xl'>
           {data?.description}
         </p>
         <div className='flex flex-row items-center mt-3 md:mt-4 gap-3'>
@@ -53,6 +53,11 @@ const Billboard = () => {
             <AiOutlineInfoCircle className='mr-1 md:mr-3 text-lg md:text-2xl lg:text-4xl' />
             More Info
           </button>
+          <div className='flex flex-1 justify-end'>
+            <div className='text-white text-xs md:text-base lg:text-xl bg-[rgba(51,51,51,.6)] h-[2.4vw] flex items-center justify-start p-[12px_20px_12px_10px] md:p-[15px_20px_15px_10px] lg:p-[18px_30px_18px_10px] border-l-[3px] border-[#dcdcdc]'>
+              13+
+            </div>
+          </div>
         </div>
       </div>
     </div>
