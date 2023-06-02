@@ -57,3 +57,7 @@ Direct link: `https://netfuix.salimi.my`
 #### Modal
 
 ![Modal](/screenshots/screenshot-4.png)
+
+#### Watch
+
+![Watch](/screenshots/screenshot-5.png)
